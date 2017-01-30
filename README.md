@@ -9,18 +9,27 @@ This image uses [baseimage-docker](https://github.com/phusion/baseimage-docker),
   * Mechanisms for easily running multiple processes, without violating the Docker philosophy.
   * It only consumes 6 MB of RAM.
 
+If you still have not done so, [install Docker](https://docs.docker.com/engine/getstarted/step_one/) and [verify your installation](https://docs.docker.com/engine/getstarted/step_three/).
+
+Pull docker image
+-----------
+
+You can download (pull) the image via following command:
+
+      $ docker pull carlesfernandez/docker-gnsssdr
+
+
 Build docker image
 -----------
 
-If you still have not done so, [install Docker](https://docs.docker.com/engine/getstarted/step_one/) and [verify your installation](https://docs.docker.com/engine/getstarted/step_three/).
+Go to the repository directory and run the following command:
 
-Then, go to the repository directory and run the following command:
-
-     $ docker build -t gnsssdr .
+     $ docker build -t carlesfernandez/docker-gnsssdr .
 
 
 Run docker image
 -----------
+
 Run:
 
-    $ docker run --rm -t -i gnsssdr /sbin/my_init -- bash -l
+    $ docker run --rm -t -i carlesfernandez/docker-gnsssdr /sbin/my_init -- bash -l
