@@ -34,6 +34,7 @@ RUN apt-get update && apt-get install -y \
     python-six \
  && rm -rf /var/lib/apt/lists/*
 
+ENV APPDATA /root
 RUN git clone https://github.com/gnss-sdr/gnss-sdr.git
 RUN cd gnss-sdr/build && git checkout next && cmake -DENABLE_OSMOSDR=ON -DENABLE_PACKAGING=ON .. && make && make install
 RUN /usr/bin/volk_profile
