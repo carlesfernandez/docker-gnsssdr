@@ -40,4 +40,6 @@ RUN cd gnss-sdr/build && git checkout next && cmake -DENABLE_OSMOSDR=ON -DENABLE
 RUN /usr/bin/volk_profile
 RUN /usr/local/bin/volk_gnsssdr_profile
 RUN apt-get clean && rm -rf /tmp/* /var/tmp/*
-CMD ["/sbin/my_init"]
+RUN rm -rf /home/src
+WORKDIR /home
+CMD ["bash"]
