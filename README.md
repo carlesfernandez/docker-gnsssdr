@@ -33,3 +33,7 @@ Run docker image
 Run:
 
     $ docker run --rm -t -i carlesfernandez/docker-gnsssdr /sbin/my_init -- bash -l
+
+or simply:
+
+    $ docker run -it carlesfernandez/docker-gnsssdr
