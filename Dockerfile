@@ -26,6 +26,7 @@ RUN apt-get update && apt-get install -y \
     libgtest-dev \
     liblapack-dev \
     liblog4cpp5-dev \
+    libmatio-dev \
     libuhd-dev \
     git \
     gnuradio-dev \
