@@ -49,7 +49,7 @@ RUN cd ../..
 RUN ldconfig
 RUN git clone https://github.com/gnss-sdr/gnss-sdr.git
 RUN cd gnss-sdr/build && git checkout next && cmake -DENABLE_OSMOSDR=ON -DENABLE_FMCOMMS2=ON -DENABLE_PLUTOSDR=ON -DENABLE_PACKAGING=ON -DENABLE_INSTALL_TESTS=ON .. && make && make install
-RUN /usr/bin/volk_profile
+RUN /usr/bin/volk_profile -v 8111
 RUN /usr/local/bin/volk_gnsssdr_profile
 RUN apt-get clean && rm -rf /tmp/* /var/tmp/*
 RUN rm -rf /home/src
