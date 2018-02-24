@@ -34,6 +34,7 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     bison \
     flex \
+    nano \
  && rm -rf /var/lib/apt/lists/*
 
 ENV APPDATA /root
