@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.10.0
+FROM phusion/baseimage:master
 MAINTAINER carles.fernandez@cttc.es
 
 # Use baseimage-docker's init system.
