@@ -7,36 +7,36 @@ CMD ["/sbin/my_init"]
 WORKDIR /home/src
 
 RUN apt-get update && apt-get install -y \
-    build-essential \
-    cmake \
-    libarmadillo-dev \
-    libblas-dev \
-    libboost-chrono-dev \
-    libboost-dev \
-    libboost-date-time-dev \
-    libboost-filesystem-dev \
-    libboost-serialization-dev \
-    libboost-system-dev \
-    libboost-thread-dev \
-    libgflags-dev \
-    libgnutls-openssl-dev \
-    libgoogle-glog-dev \
-    libgtest-dev \
-    liblapack-dev \
-    liblog4cpp5-dev \
-    libmatio-dev \
-    libpcap-dev \
-    libuhd-dev \
-    git \
-    gnuradio-dev \
-    gr-osmosdr \
-    python-mako \
-    python-six \
-    libxml2-dev \
-    bison \
-    flex \
-    nano \
- && rm -rf /var/lib/apt/lists/*
+    build-essential=12.1ubuntu2 \
+    cmake=3.5.1-1ubuntu3 \
+    libarmadillo-dev=1:6.500.5+dfsg-1 \
+    libblas-dev=3.6.0-2ubuntu2 \
+    libboost-chrono-dev=1.58.0.1ubuntu1 \
+    libboost-dev=1.58.0.1ubuntu1 \
+    libboost-date-time-dev=1.58.0.1ubuntu1 \
+    libboost-filesystem-dev=1.58.0.1ubuntu1 \
+    libboost-serialization-dev=1.58.0.1ubuntu1 \
+    libboost-system-dev=1.58.0.1ubuntu1 \
+    libboost-thread-dev=1.58.0.1ubuntu1 \
+    libgflags-dev=2.1.2-3 \
+    libgnutls-dev=3.4.10-4ubuntu1.4 \
+    libgoogle-glog-dev=0.3.4-0.1 \
+    libgtest-dev=1.7.0-4ubuntu1 \
+    liblapack-dev=3.6.0-2ubuntu2 \
+    liblog4cpp5-dev=1.0-4.1 \
+    libmatio-dev=1.5.3-1 \
+    libpcap-dev=1.7.4-2 \
+    libuhd-dev=3.9.2-1 \
+    git=1:2.7.4-0ubuntu1.4 \
+    gnuradio-dev=3.7.9.1-2ubuntu1 \
+    gr-osmosdr=0.1.4-8 \
+    python-mako=1.0.3+ds1-1ubuntu1 \
+    python-six=1.10.0-3 \
+    libxml2-dev=2.9.3+dfsg1-1ubuntu0.5 \
+    bison=2:3.0.4.dfsg-1 \
+    flex=2.6.0-11 \
+    nano=2.5.3-2ubuntu2 \
+ && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV APPDATA /root
 RUN git clone https://github.com/analogdevicesinc/libiio.git
