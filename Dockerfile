@@ -39,16 +39,11 @@ RUN apt-get update && apt-get install -y \
  && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV APPDATA /root
-RUN git clone https://github.com/analogdevicesinc/libiio.git && cd libiio && mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=/usr .. && make && make install && cd .. && rm -rf *
-RUN cd ..
-RUN git clone https://github.com/analogdevicesinc/libad9361-iio.git
-RUN cd libad9361-iio && mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=/usr .. && make && make install && cd .. && rm -rf *
-RUN cd ..
-RUN git clone https://github.com/analogdevicesinc/gr-iio.git
-RUN cd gr-iio && mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=/usr .. && make && make install && cd .. && rm -rf *
-RUN cd ..
+RUN git clone https://github.com/analogdevicesinc/libiio.git && cd libiio && mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=/usr .. && make && make install && cd ../.. && rm -rf *
+RUN git clone https://github.com/analogdevicesinc/libad9361-iio.git && cd libad9361-iio && mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=/usr .. && make && make install && cd ../.. && rm -rf *
+RUN git clone https://github.com/analogdevicesinc/gr-iio.git && cd gr-iio && mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=/usr .. && make && make install && cd ../.. && rm -rf *
 RUN ldconfig
-RUN git clone https://github.com/gnss-sdr/gnss-sdr.git && cd gnss-sdr/build && git checkout next && cmake -DENABLE_OSMOSDR=ON -DENABLE_FMCOMMS2=ON -DENABLE_PLUTOSDR=ON -DENABLE_AD9361=ON -DENABLE_RAW_UDP=ON -DENABLE_PACKAGING=ON -DENABLE_INSTALL_TESTS=ON .. && make && make install && cd .. && rm -rf *
+RUN git clone https://github.com/gnss-sdr/gnss-sdr.git && cd gnss-sdr/build && git checkout next && cmake -DENABLE_OSMOSDR=ON -DENABLE_FMCOMMS2=ON -DENABLE_PLUTOSDR=ON -DENABLE_AD9361=ON -DENABLE_RAW_UDP=ON -DENABLE_PACKAGING=ON -DENABLE_INSTALL_TESTS=ON .. && make && make install && cd ../.. && rm -rf *
 RUN /usr/bin/volk_profile -v 8111
 RUN /usr/local/bin/volk_gnsssdr_profile
 RUN apt-get clean && rm -rf /tmp/* /var/tmp/*
