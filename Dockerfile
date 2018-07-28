@@ -6,7 +6,7 @@ CMD ["/sbin/my_init"]
 
 WORKDIR /home/src
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential=12.1ubuntu2 \
     cmake=3.5.1-1ubuntu3 \
     libarmadillo-dev=1:6.500.5+dfsg-1 \
