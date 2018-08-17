@@ -2,7 +2,7 @@
 # See https://github.com/phusion/baseimage-docker/releases
 # for a list of version numbers.
 
-FROM phusion/baseimage:0.10.1
+FROM phusion/baseimage:0.10.2
 MAINTAINER carles.fernandez@cttc.es
 
 # Use baseimage-docker's init system.
