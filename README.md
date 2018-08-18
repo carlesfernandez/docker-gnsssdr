@@ -7,7 +7,7 @@ This image uses [baseimage-docker](https://github.com/phusion/baseimage-docker),
   * Modifications for Docker-friendliness.
   * Administration tools that are especially useful in the context of Docker.
   * Mechanisms for easily running multiple processes, without violating the Docker philosophy.
-  * It only consumes 6 MB of RAM.
+  * It only consumes 9 MB of RAM.
 
 If you still have not done so, [install Docker](https://docs.docker.com/engine/getstarted/step_one/) and [verify your installation](https://docs.docker.com/engine/getstarted/step_three/).
 
