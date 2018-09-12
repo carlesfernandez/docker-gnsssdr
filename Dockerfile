@@ -5,9 +5,6 @@
 FROM phusion/baseimage:0.11
 MAINTAINER carles.fernandez@cttc.es
 
-# Use baseimage-docker's init system.
-CMD ["/sbin/my_init"]
-
 WORKDIR /home/src
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
