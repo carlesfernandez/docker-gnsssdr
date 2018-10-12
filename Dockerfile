@@ -28,7 +28,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  libmatio-dev=1.5.11-1 \
  libpcap-dev=1.8.1-6ubuntu1 \
  libuhd-dev=3.10.3.0-2 \
- git=1:2.17.1-1ubuntu0.1 \
+ git=1:2.17.1-1ubuntu0.3 \
  gnuradio-dev=3.7.11-10 \
  gr-osmosdr=0.1.4-14build1 \
  python-mako=1.0.7+ds1-1 \
