@@ -27,6 +27,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  liblog4cpp5-dev=1.1.1-3 \
  libmatio-dev=1.5.11-1 \
  libpcap-dev=1.8.1-6ubuntu1 \
+ libpugixml-dev=1.8.1-7 \
  libuhd-dev=3.10.3.0-2 \
  git=1:2.17.1-1ubuntu0.3 \
  gnuradio-dev=3.7.11-10 \
