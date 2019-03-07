@@ -41,6 +41,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV APPDATA /root
+ENV PYTHONPATH /usr/lib/python2.7/dist-packages
 RUN git clone https://github.com/analogdevicesinc/libiio.git && cd libiio && mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=/usr .. && NPROC=$(grep -c ^processor /proc/cpuinfo) && make -j$(($NPROC+1)) && make install && cd ../.. && rm -rf *
 RUN git clone https://github.com/analogdevicesinc/libad9361-iio.git && cd libad9361-iio && mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=/usr .. && NPROC=$(grep -c ^processor /proc/cpuinfo) && make -j$(($NPROC+1)) && make install && cd ../.. && rm -rf *
 RUN git clone https://github.com/analogdevicesinc/gr-iio.git && cd gr-iio && mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=/usr .. && NPROC=$(grep -c ^processor /proc/cpuinfo) && make -j$(($NPROC+1))  && make install && cd ../.. && rm -rf * && ldconfig
