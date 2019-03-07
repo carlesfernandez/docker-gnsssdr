@@ -19,13 +19,6 @@ You can download (pull) the image via following command:
       $ docker pull carlesfernandez/docker-gnsssdr
 
 
-Build docker image
------------
-
-Go to the repository directory and run the following command:
-
-     $ docker build -t carlesfernandez/docker-gnsssdr .
-
 
 Run docker image
 -----------
@@ -72,3 +65,13 @@ Run:
    In the container:
 
        root@ubuntu:/home# gnuradio-companion
+
+
+Build docker image
+-----------
+
+This step is not needed if you have pulled the image. If you want to build the Docker image on you own, go to the repository root folder and run the following command:
+
+     $ docker build -t carlesfernandez/docker-gnsssdr .
+
+You can change `carlesfernandez/docker-gnsssdr` at your own preference.
