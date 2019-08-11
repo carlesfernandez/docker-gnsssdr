@@ -9,7 +9,7 @@ WORKDIR /home/src
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
  build-essential=12.4ubuntu1 \
- cmake=3.10.2-1ubuntu2 \
+ cmake=3.10.2-1ubuntu2.18.04.1 \
  libarmadillo-dev=1:8.400.0+dfsg-2 \
  libblas-dev=3.7.1-4ubuntu1 \
  libboost-chrono-dev=1.65.1.0ubuntu1 \
