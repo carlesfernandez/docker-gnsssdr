@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  libboost-system-dev=1.65.1.0ubuntu1 \
  libboost-thread-dev=1.65.1.0ubuntu1 \
  libgflags-dev=2.2.1-1 \
- libgnutls28-dev=3.5.18-1ubuntu1.1 \
+ libgnutls28-dev=3.5.18-1ubuntu1.2 \
  libgoogle-glog-dev=0.3.5-1 \
  googletest=1.8.0-6 \
  liblapack-dev=3.7.1-4ubuntu1 \
@@ -31,7 +31,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  protobuf-compiler=3.0.0-9.1ubuntu1 \
  libpugixml-dev=1.8.1-7 \
  libuhd-dev=3.10.3.0-2 \
- git=1:2.17.1-1ubuntu0.4 \
+ git=1:2.17.1-1ubuntu0.5 \
  gnuradio-dev=3.7.11-10 \
  gr-osmosdr=0.1.4-14build1 \
  python3-mako=1.0.7+ds1-1 \
