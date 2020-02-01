@@ -54,7 +54,7 @@ This will mount the `/home/user/data` folder in the host machine on the `/data` 
 
        $ xhost -local:root
 
- * **On MacOS host machines**
+ * **On macOS host machines**
 
    Do this once:
      - Install the latest [XQuartz](https://www.xquartz.org/) version and run it.
