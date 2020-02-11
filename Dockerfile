@@ -36,7 +36,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  gr-osmosdr=0.1.4-14build1 \
  python3-mako=1.0.7+ds1-1 \
  python3-six=1.11.0-2 \
- libxml2-dev=2.9.4+dfsg1-6.1ubuntu1.2 \
+ libxml2-dev=2.9.4+dfsg1-6.1ubuntu1.3 \
  bison=2:3.0.4.dfsg-1build1 \
  flex=2.6.4-6 \
  nano=2.9.3-2 \
