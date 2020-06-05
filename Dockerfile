@@ -2,7 +2,7 @@
 # See https://github.com/phusion/baseimage-docker/releases
 # for a list of version numbers.
 
-FROM phusion/baseimage:0.11
+FROM phusion/baseimage:bionic-1.0.0
 MAINTAINER carles.fernandez@cttc.es
 
 WORKDIR /home/src
