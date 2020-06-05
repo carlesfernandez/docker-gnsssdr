@@ -3,7 +3,7 @@
 # for a list of version numbers.
 
 FROM phusion/baseimage:bionic-1.0.0
-MAINTAINER carles.fernandez@cttc.es
+LABEL version="1.0" description="GNSS-SDR image" maintainer="carles.fernandez@cttc.es"
 
 WORKDIR /home/src
 
