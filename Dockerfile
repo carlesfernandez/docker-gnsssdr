@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  libboost-system-dev=1.65.1.0ubuntu1 \
  libboost-thread-dev=1.65.1.0ubuntu1 \
  libgflags-dev=2.2.1-1 \
- libgnutls28-dev=3.5.18-1ubuntu1.3 \
+ libgnutls28-dev=3.5.18-1ubuntu1.4 \
  libgoogle-glog-dev=0.3.5-1 \
  googletest=1.8.0-6 \
  liblapack-dev=3.7.1-4ubuntu1 \
