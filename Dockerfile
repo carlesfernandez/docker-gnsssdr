@@ -46,6 +46,9 @@ ENV PYTHONPATH /usr/lib/python3.6/dist-packages
 RUN git clone https://github.com/analogdevicesinc/libiio.git && cd libiio && mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=/usr .. && NPROC=$(grep -c ^processor /proc/cpuinfo) && make -j$(($NPROC+1)) && make install && cd ../.. && rm -rf *
 RUN git clone https://github.com/analogdevicesinc/libad9361-iio.git && cd libad9361-iio && mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=/usr .. && NPROC=$(grep -c ^processor /proc/cpuinfo) && make -j$(($NPROC+1)) && make install && cd ../.. && rm -rf *
 RUN git clone https://github.com/analogdevicesinc/gr-iio.git && cd gr-iio && mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=/usr .. && NPROC=$(grep -c ^processor /proc/cpuinfo) && make -j$(($NPROC+1))  && make install && cd ../.. && rm -rf * && ldconfig
+
+# Trick to avoid using cache
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN git clone https://github.com/gnss-sdr/gnss-sdr.git && cd gnss-sdr/build && git checkout next && cmake -DENABLE_OSMOSDR=ON -DENABLE_FMCOMMS2=ON -DENABLE_PLUTOSDR=ON -DENABLE_AD9361=ON -DENABLE_RAW_UDP=ON -DENABLE_PACKAGING=ON -DENABLE_INSTALL_TESTS=ON .. && NPROC=$(grep -c ^processor /proc/cpuinfo) && make -j$(($NPROC+1)) && make install && cd ../.. && rm -rf * && rm -rf /home/*
 WORKDIR /home
 RUN /usr/bin/volk_profile -v 8111
