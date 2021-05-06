@@ -51,7 +51,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ENV APPDATA /root
 ENV PYTHONPATH /usr/lib/python3/dist-packages
 
-RUN git clone https://github.com/gnss-sdr/gnss-sdr.git && cd gnss-sdr/build && git checkout next && cmake -DENABLE_OSMOSDR=ON -DENABLE_FMCOMMS2=ON -DENABLE_PLUTOSDR=ON -DENABLE_AD9361=ON -DENABLE_RAW_UDP=ON -DENABLE_PACKAGING=ON -DENABLE_INSTALL_TESTS=ON .. && NPROC=$(grep -c ^processor /proc/cpuinfo) && make -j$(($NPROC+1)) && make install && cd ../.. && rm -rf * && rm -rf /home/*
+ARG GITHUB_REPO gnss-sdr
+ARG GITHUB_BRANCH next
+
+RUN git clone https://github.com/${GITHUB_REPO}/gnss-sdr.git && \
+  cd gnss-sdr/build && git checkout ${GITHUB_BRANCH} && \
+  cmake -DENABLE_OSMOSDR=ON -DENABLE_FMCOMMS2=ON -DENABLE_PLUTOSDR=ON -DENABLE_AD9361=ON -DENABLE_RAW_UDP=ON -DENABLE_PACKAGING=ON -DENABLE_INSTALL_TESTS=ON .. && \
+  make -j2 && make install && cd ../.. && rm -rf * && rm -rf /home/*
+
 WORKDIR /home
 RUN /usr/bin/volk_profile -v 8111
 RUN /usr/local/bin/volk_gnsssdr_profile
