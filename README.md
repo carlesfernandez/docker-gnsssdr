@@ -110,7 +110,7 @@ You can change `carlesfernandez/docker-gnsssdr` at your own preference.
 
 ## Copyright and License
 
-&#169; 2017-2021 Carles Fernandez-Prades. <carles.fernandez@cttc.es>
+Copyright: &copy; 2017-2021 Carles Fern&aacute;ndez-Prades. All rights reserved.
 
 The content of this repository is published under the [MIT](./LICENSE) license.
 
