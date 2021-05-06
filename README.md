@@ -4,7 +4,7 @@ SPDX-License-Identifier: MIT
 )
 
 [comment]: # (
-SPDX-FileCopyrightText: 2020 Carles Fernandez-Prades <carles.fernandez@cttc.es>
+SPDX-FileCopyrightText: 2017-2021 Carles Fernandez-Prades <carles.fernandez@cttc.es>
 )
 <!-- prettier-ignore-end -->
 
@@ -107,3 +107,16 @@ command:
      $ docker build -t carlesfernandez/docker-gnsssdr .
 
 You can change `carlesfernandez/docker-gnsssdr` at your own preference.
+
+## Copyright and License
+
+&#169; 2017-2021 Carles Fernandez-Prades. <carles.fernandez@cttc.es>
+
+The content of this repository is published under the [MIT](./LICENSE) license.
+
+## Acknowledgements
+
+This work was partially supported by the Spanish Ministry of Science,
+Innovation, and Universities through the Statistical Learning and Inference for
+Large Dimensional Communication Systems (ARISTIDES, RTI2018-099722-B-I00)
+project.
