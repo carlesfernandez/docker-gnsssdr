@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  build-essential=12.8ubuntu1.1 \
  cmake=3.16.3-1ubuntu1 \
  flex=2.6.4-6.2 \
+ gir1.2-gtk-3.0=3.24.20-0ubuntu1 \
  git=1:2.25.1-1ubuntu3.1 \
  gnuradio-dev=3.8.1.0~rc1-2build2 \
  gr-iio=0.3-7build3 \
