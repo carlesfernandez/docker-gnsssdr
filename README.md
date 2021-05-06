@@ -101,12 +101,12 @@ folder inside the container, with read and write permissions.
 ## Build docker image
 
 This step is not needed if you have pulled the image. If you want to build the
-Docker image on you own, go to the repository root folder and run the following
+Docker image on your own, go to the repository root folder and run the following
 command:
 
      $ docker build -t carlesfernandez/docker-gnsssdr .
 
-You can change `carlesfernandez/docker-gnsssdr` at your own preference.
+You can change the tag `carlesfernandez/docker-gnsssdr` at your own preference.
 
 ## Copyright and License
 

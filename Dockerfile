@@ -40,7 +40,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  liborc-0.4-dev=1:0.4.31-1 \
  libpcap-dev=1.9.1-3 \
  libprotobuf-dev=3.6.1.3-2ubuntu5 \
- libpugixml-dev=1.10-1  \
+ libpugixml-dev=1.10-1 \
  libuhd-dev=3.15.0.0-2build5 \
  libxml2-dev=2.9.10+dfsg-5 \
  nano=4.8-1ubuntu1 \
@@ -51,7 +51,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ENV APPDATA /root
 ENV PYTHONPATH /usr/lib/python3/dist-packages
 
-RUN git clone https://github.com/gnss-sdr/gnss-sdr.git && cd gnss-sdr/build && git checkout next && cmake -DENABLE_OSMOSDR=ON -DENABLE_FMCOMMS2=ON -DENABLE_PLUTOSDR=ON -DENABLE_AD9361=ON -DENABLE_FPGA=ON -DENABLE_RAW_UDP=ON -DENABLE_PACKAGING=ON -DENABLE_INSTALL_TESTS=ON .. && NPROC=$(grep -c ^processor /proc/cpuinfo) && make -j$(($NPROC+1)) && make install && cd ../.. && rm -rf * && rm -rf /home/*
+RUN git clone https://github.com/gnss-sdr/gnss-sdr.git && cd gnss-sdr/build && git checkout next && cmake -DENABLE_OSMOSDR=ON -DENABLE_FMCOMMS2=ON -DENABLE_PLUTOSDR=ON -DENABLE_AD9361=ON -DENABLE_RAW_UDP=ON -DENABLE_PACKAGING=ON -DENABLE_INSTALL_TESTS=ON .. && NPROC=$(grep -c ^processor /proc/cpuinfo) && make -j$(($NPROC+1)) && make install && cd ../.. && rm -rf * && rm -rf /home/*
 WORKDIR /home
 RUN /usr/bin/volk_profile -v 8111
 RUN /usr/local/bin/volk_gnsssdr_profile
