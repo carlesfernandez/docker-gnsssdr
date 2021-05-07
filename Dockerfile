@@ -51,8 +51,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ENV APPDATA /root
 ENV PYTHONPATH /usr/lib/python3/dist-packages
 
-ARG GITHUB_REPO gnss-sdr
-ARG GITHUB_BRANCH next
+ARG GITHUB_REPO=gnss-sdr
+ARG GITHUB_BRANCH=next
 
 RUN git clone https://github.com/${GITHUB_REPO}/gnss-sdr.git && \
   cd gnss-sdr/build && git checkout ${GITHUB_BRANCH} && \
