@@ -36,7 +36,7 @@ and verify your installation before proceeding to use or build the Docker image.
 
 ## Pull docker image
 
-You can download (pull) the image via following command:
+You can download (pull) the image via the following command:
 
       $ docker pull carlesfernandez/docker-gnsssdr
 
