@@ -15,7 +15,7 @@ This repository contains a Dockerfile that creates a
 and its dependencies installed via `.deb` packages. This includes
 [GNU Radio](https://gnuradio.org/) and drivers for a wide range of RF front-ends
 through [UHD](https://github.com/EttusResearch/uhd),
-[gr-osmosdr](http://osmocom.org/projects/sdr/wiki/GrOsmoSDR) and
+[gr-osmosdr](https://osmocom.org/projects/gr-osmosdr/wiki/GrOsmoSDR) and
 [gr-iio](https://github.com/analogdevicesinc/gr-iio).
 
 This image uses [baseimage-docker](https://github.com/phusion/baseimage-docker),
@@ -26,11 +26,11 @@ containers. It is Ubuntu, plus:
 - Administration tools that are especially useful in the context of Docker.
 - Mechanisms for easily running multiple processes, without violating the Docker
   philosophy.
-- It only consumes 9 MB of RAM.
+- Reduced footprint on RAM.
 
 If you still have not done so,
-[install Docker](https://docs.docker.com/engine/getstarted/step_one/) and
-[verify your installation](https://docs.docker.com/engine/getstarted/step_three/).
+[install Docker](https://docs.docker.com/get-started/#set-up-your-docker-environment)
+and verify your installation before proceeding to use or build the Docker image.
 
 ## Pull docker image
 
@@ -57,10 +57,20 @@ folder inside the container, with read and write permissions.
 
 ### Run with graphical environment:
 
-- **On GNU/Linux host machines with X11 server installed**
+- **On GNU/Linux host machines**
 
-  In the host machine, adjust the permission of the X server host by the
-  following command:
+  Install the X11 server utilities in the host machine:
+
+  - Debian: `apt-get install x11-xserver-utils`
+  - Ubuntu: `apt-get install x11-xserver-utils`
+  - Arch Linux: `pacman -S xorg-xhost`
+  - Kali Linux: `apt-get install x11-xserver-utils`
+  - CentOS: `yum install xorg-xhost`
+  - Fedora: `dnf install xorg-xhost`
+  - Raspbian: `apt-get install x11-xserver-utils`
+
+  Each time you want to use the graphical environment, adjust the permission of
+  the X server in the host by the following command:
 
       $ xhost +local:root
 
@@ -83,7 +93,8 @@ folder inside the container, with read and write permissions.
     in XQuartz settings.
   - Quit and restart XQuartz to activate the setting.
 
-  In the host machine:
+  Each time you want to use the graphical environment, type in the host machine
+  (with XQuartz already running):
 
       $ xhost + 127.0.0.1
 
@@ -100,17 +111,19 @@ folder inside the container, with read and write permissions.
 
 ## Build docker image
 
-This step is not needed if you have pulled the image. If you want to build the
-Docker image on your own, go to the repository root folder and run the following
-command:
+This step is not needed if you have pulled the docker image. If you want to
+build an updated Docker image on your own, go to the repository root folder and
+run the following command:
 
      $ docker build -t carlesfernandez/docker-gnsssdr .
 
-You can change the tag `carlesfernandez/docker-gnsssdr` at your own preference.
+You can change the tag name `carlesfernandez/docker-gnsssdr` at your own
+preference.
 
 ## Copyright and License
 
-Copyright: &copy; 2017-2021 Carles Fern&aacute;ndez-Prades. All rights reserved.
+Copyright: &copy; 2017-2021 Carles Fern&aacute;ndez-Prades,
+[CTTC](http://www.cttc.es/). All rights reserved.
 
 The content of this repository is published under the [MIT](./LICENSE) license.
 
