@@ -51,10 +51,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ENV APPDATA /root
 ENV PYTHONPATH /usr/lib/python3/dist-packages
 
+ARG GITHUB_USER=gnss-sdr
 ARG GITHUB_REPO=gnss-sdr
 ARG GITHUB_BRANCH=next
 
-RUN git clone https://github.com/${GITHUB_REPO}/gnss-sdr.git && \
+RUN git clone https://github.com/${GITHUB_USER}/${GITHUB_REPO}.git && \
   cd gnss-sdr/build && git checkout ${GITHUB_BRANCH} && \
   cmake -DENABLE_OSMOSDR=ON -DENABLE_FMCOMMS2=ON -DENABLE_PLUTOSDR=ON -DENABLE_AD9361=ON -DENABLE_RAW_UDP=ON -DENABLE_PACKAGING=ON -DENABLE_INSTALL_TESTS=ON .. && \
   make -j2 && make install && cd ../.. && rm -rf * && rm -rf /home/*
