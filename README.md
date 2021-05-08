@@ -10,6 +10,8 @@ SPDX-FileCopyrightText: 2017-2021 Carles Fernandez-Prades <carles.fernandez@cttc
 
 # docker-gnsssdr
 
+[![REUSE status](https://api.reuse.software/badge/github.com/carlesfernandez/docker-gnsssdr)](https://api.reuse.software/info/github.com/carlesfernandez/docker-gnsssdr)
+
 This repository contains a Dockerfile that creates a
 [Docker](https://www.docker.com/) image with [GNSS-SDR](https://gnss-sdr.org)
 and its dependencies installed via `.deb` packages. This includes
