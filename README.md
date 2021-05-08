@@ -8,7 +8,7 @@ SPDX-FileCopyrightText: 2017-2021 Carles Fernandez-Prades <carles.fernandez@cttc
 )
 <!-- prettier-ignore-end -->
 
-# GNSS-SDR Dockerfile
+# docker-gnsssdr
 
 This repository contains a Dockerfile that creates a
 [Docker](https://www.docker.com/) image with [GNSS-SDR](https://gnss-sdr.org)
