@@ -122,6 +122,18 @@ run the following command:
 You can change the tag name `carlesfernandez/docker-gnsssdr` at your own
 preference.
 
+By default, this will build the content in the `next` branch of the upstream
+repository https://github.com/gnss-sdr/gnss-sdr. You can change the default
+Github user, repo and branch with the following building flags:
+
+     $ docker build -t username/docker-gnsssdr \
+     --build-arg GITHUB_USER=my_github_username \
+     --build-arg GITHUB_REPO=my_repo \
+     --build-arg GITHUB_BRANCH=my_branch .
+
+The default values are `GITHUB_USER=gnss-sdr`, `GITHUB_REPO=gnss-sdr`, and
+`GITHUB_BRANCH=next`.
+
 ## Copyright and License
 
 Copyright: &copy; 2017-2021 Carles Fern&aacute;ndez-Prades,
