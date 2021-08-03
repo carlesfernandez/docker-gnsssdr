@@ -30,7 +30,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  libboost-system-dev=1.71.0.0ubuntu2 \
  libboost-thread-dev=1.71.0.0ubuntu2 \
  libgflags-dev=2.2.2-1build1 \
- libgnutls28-dev=3.6.13-2ubuntu1.3 \
+ libgnutls28-dev=3.6.13-2ubuntu1.6 \
  libgoogle-glog-dev=0.4.0-1build1 \
  libgtest-dev=1.10.0-2 \
  libiio-dev=0.19-1 \
