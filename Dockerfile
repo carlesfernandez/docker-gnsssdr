@@ -5,7 +5,7 @@
 # See https://github.com/phusion/baseimage-docker/releases
 # for a list of version numbers.
 
-FROM phusion/baseimage:focal-1.0.0
+FROM phusion/baseimage:focal-1.2.0
 LABEL version="2.0" description="GNSS-SDR image" maintainer="carles.fernandez@cttc.es"
 
 WORKDIR /home/src
@@ -42,7 +42,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  libprotobuf-dev=3.6.1.3-2ubuntu5 \
  libpugixml-dev=1.10-1 \
  libuhd-dev=3.15.0.0-2build5 \
- libxml2-dev=2.9.10+dfsg-5 \
+ libxml2-dev=2.9.10+dfsg-5ubuntu0.20.04.2 \
  nano=4.8-1ubuntu1 \
  protobuf-compiler=3.6.1.3-2ubuntu5 \
  python3-mako=1.1.0+ds1-1ubuntu2 \
