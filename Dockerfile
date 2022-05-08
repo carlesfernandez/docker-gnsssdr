@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  cmake=3.16.3-1ubuntu1 \
  flex=2.6.4-6.2 \
  gir1.2-gtk-3.0=3.24.20-0ubuntu1.1 \
- git=1:2.25.1-1ubuntu3.3 \
+ git=1:2.25.1-1ubuntu3.4 \
  gnuradio-dev=3.8.1.0~rc1-2build2 \
  gr-iio=0.3-7build3 \
  gr-osmosdr=0.2.0-2 \
