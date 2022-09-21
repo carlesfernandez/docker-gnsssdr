@@ -5,7 +5,7 @@
 # See https://github.com/phusion/baseimage-docker/releases
 # for a list of version numbers.
 
-FROM phusion/baseimage:jammy-1.0.0
+FROM phusion/baseimage:jammy-1.0.1
 LABEL version="3.0" description="GNSS-SDR image" maintainer="carles.fernandez@cttc.es"
 
 WORKDIR /home/src
