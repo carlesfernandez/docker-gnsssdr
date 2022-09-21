@@ -13,7 +13,7 @@ WORKDIR /home/src
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive && apt-get install -y --no-install-recommends \
  bison=2:3.8.2+dfsg-1build1 \
  build-essential=12.9ubuntu3 \
- cmake=3.22.1-1ubuntu1 \
+ cmake=3.22.1-1ubuntu1.22.04.1 \
  flex=2.6.4-8build2 \
  gir1.2-gtk-3.0=3.24.33-1ubuntu1 \
  git=1:2.34.1-1ubuntu1.4 \
