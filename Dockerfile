@@ -11,41 +11,41 @@ LABEL version="3.0" description="GNSS-SDR image" maintainer="carles.fernandez@ct
 WORKDIR /home/src
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive && apt-get install -y --no-install-recommends \
- bison=2:3.8.2+dfsg-1build1 \
- build-essential=12.9ubuntu3 \
- cmake=3.22.1-1ubuntu1.22.04.1 \
- flex=2.6.4-8build2 \
- gir1.2-gtk-3.0=3.24.33-1ubuntu1 \
- git=1:2.34.1-1ubuntu1.4 \
- gnuradio-dev=3.10.1.1-2 \
- gr-osmosdr=0.2.3-5build2 \
- libad9361-dev=0.2-1 \
- libarmadillo-dev=1:10.8.2+dfsg-1 \
- libblas-dev=3.10.0-2ubuntu1 \
- libboost-chrono-dev=1.74.0.3ubuntu7 \
- libboost-date-time-dev=1.74.0.3ubuntu7 \
- libboost-dev=1.74.0.3ubuntu7 \
- libboost-serialization-dev=1.74.0.3ubuntu7 \
- libboost-system-dev=1.74.0.3ubuntu7 \
- libboost-thread-dev=1.74.0.3ubuntu7 \
- libgflags-dev=2.2.2-2 \
- libgnutls28-dev=3.7.3-4ubuntu1.1 \
- libgoogle-glog-dev=0.5.0+really0.4.0-2 \
- libgtest-dev=1.11.0-3 \
- libiio-dev=0.23-2 \
- liblapack-dev=3.10.0-2ubuntu1 \
- libmatio-dev=1.5.21-1 \
- libsndfile1-dev=1.0.31-2build1 \
- liborc-0.4-dev=1:0.4.32-2 \
- libpcap-dev=1.10.1-4build1 \
- libprotobuf-dev=3.12.4-1ubuntu7 \
- libpugixml-dev=1.12.1-1 \
- libuhd-dev=4.1.0.5-3 \
- libxml2-dev=2.9.13+dfsg-1ubuntu0.1 \
- nano=6.2-1 \
- protobuf-compiler=3.12.4-1ubuntu7 \
- python3-mako=1.1.3+ds1-2 \
- && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+  bison=2:3.8.2+dfsg-1build1 \
+  build-essential=12.9ubuntu3 \
+  cmake=3.22.1-1ubuntu1.22.04.1 \
+  flex=2.6.4-8build2 \
+  gir1.2-gtk-3.0=3.24.33-1ubuntu1 \
+  git=1:2.34.1-1ubuntu1.5 \
+  gnuradio-dev=3.10.1.1-2 \
+  gr-osmosdr=0.2.3-5build2 \
+  libad9361-dev=0.2-1 \
+  libarmadillo-dev=1:10.8.2+dfsg-1 \
+  libblas-dev=3.10.0-2ubuntu1 \
+  libboost-chrono-dev=1.74.0.3ubuntu7 \
+  libboost-date-time-dev=1.74.0.3ubuntu7 \
+  libboost-dev=1.74.0.3ubuntu7 \
+  libboost-serialization-dev=1.74.0.3ubuntu7 \
+  libboost-system-dev=1.74.0.3ubuntu7 \
+  libboost-thread-dev=1.74.0.3ubuntu7 \
+  libgflags-dev=2.2.2-2 \
+  libgnutls28-dev=3.7.3-4ubuntu1.1 \
+  libgoogle-glog-dev=0.5.0+really0.4.0-2 \
+  libgtest-dev=1.11.0-3 \
+  libiio-dev=0.23-2 \
+  liblapack-dev=3.10.0-2ubuntu1 \
+  libmatio-dev=1.5.21-1 \
+  libsndfile1-dev=1.0.31-2build1 \
+  liborc-0.4-dev=1:0.4.32-2 \
+  libpcap-dev=1.10.1-4build1 \
+  libprotobuf-dev=3.12.4-1ubuntu7 \
+  libpugixml-dev=1.12.1-1 \
+  libuhd-dev=4.1.0.5-3 \
+  libxml2-dev=2.9.13+dfsg-1ubuntu0.1 \
+  nano=6.2-1 \
+  protobuf-compiler=3.12.4-1ubuntu7 \
+  python3-mako=1.1.3+ds1-2 \
+  && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV APPDATA /root
 ENV PYTHONPATH /usr/lib/python3/dist-packages
