@@ -38,12 +38,12 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive && apt-get install -
   libsndfile1-dev=1.0.31-2build1 \
   liborc-0.4-dev=1:0.4.32-2 \
   libpcap-dev=1.10.1-4build1 \
-  libprotobuf-dev=3.12.4-1ubuntu7 \
+  libprotobuf-dev=3.12.4-1ubuntu7.22.04.1 \
   libpugixml-dev=1.12.1-1 \
   libuhd-dev=4.1.0.5-3 \
   libxml2-dev=2.9.13+dfsg-1ubuntu0.2 \
   nano=6.2-1 \
-  protobuf-compiler=3.12.4-1ubuntu7 \
+  protobuf-compiler=3.12.4-1ubuntu7.22.04.1 \
   python3-mako=1.1.3+ds1-2 \
   && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
