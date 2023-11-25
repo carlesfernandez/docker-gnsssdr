@@ -4,7 +4,7 @@ SPDX-License-Identifier: MIT
 )
 
 [comment]: # (
-SPDX-FileCopyrightText: 2017-2021 Carles Fernandez-Prades <carles.fernandez@cttc.es>
+SPDX-FileCopyrightText: 2017-2023 Carles Fernandez-Prades <carles.fernandez@cttc.es>
 )
 <!-- prettier-ignore-end -->
 
@@ -136,14 +136,16 @@ The default values are `GITHUB_USER=gnss-sdr`, `GITHUB_REPO=gnss-sdr`, and
 
 ## Copyright and License
 
-Copyright: &copy; 2017-2021 Carles Fern&aacute;ndez-Prades,
+Copyright: &copy; 2017-2023 Carles Fern&aacute;ndez-Prades,
 [CTTC](https://www.cttc.cat). All rights reserved.
 
 The content of this repository is published under the [MIT](./LICENSE) license.
 
 ## Acknowledgements
 
+This work is partially supported by PID2021-128373OB-I00 (2022-2025).
+
 This work was partially supported by the Spanish Ministry of Science,
 Innovation, and Universities through the Statistical Learning and Inference for
 Large Dimensional Communication Systems (ARISTIDES, RTI2018-099722-B-I00)
-project.
+project (2018-2022).
