@@ -54,7 +54,8 @@ ARG GITHUB_USER=gnss-sdr
 ARG GITHUB_REPO=gnss-sdr
 ARG GITHUB_BRANCH=next
 
-RUN git clone https://github.com/${GITHUB_USER}/${GITHUB_REPO}.git && \
+RUN git config --global http.postBuffer 52428800 && \
+  git clone https://github.com/${GITHUB_USER}/${GITHUB_REPO}.git && \
   cd gnss-sdr/build && git checkout ${GITHUB_BRANCH} && \
   cmake -DENABLE_OSMOSDR=ON -DENABLE_FMCOMMS2=ON -DENABLE_PLUTOSDR=ON -DENABLE_AD9361=ON -DENABLE_RAW_UDP=ON -DENABLE_ZMQ=ON -DENABLE_PACKAGING=ON -DENABLE_INSTALL_TESTS=ON .. && \
   make -j2 && make install && cd ../.. && rm -rf * && rm -rf /home/*
