@@ -1,12 +1,12 @@
-# SPDX-FileCopyrightText: 2017-2022, Carles Fernandez-Prades <carles.fernandez@cttc.es>
+# SPDX-FileCopyrightText: 2017-2024, Carles Fernandez-Prades <carles.fernandez@cttc.es>
 # SPDX-License-Identifier: MIT
 #
 # Use phusion/baseimage as base image.
 # See https://github.com/phusion/baseimage-docker/releases
 # for a list of version numbers.
 
-FROM phusion/baseimage:jammy-1.0.1
-LABEL version="3.0" description="GNSS-SDR image" maintainer="carles.fernandez@cttc.es"
+FROM phusion/baseimage:jammy-1.0.2
+LABEL version="4.0" description="GNSS-SDR image" maintainer="carles.fernandez@cttc.es"
 
 WORKDIR /home/src
 
