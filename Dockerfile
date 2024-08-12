@@ -47,8 +47,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive && apt-get install -
   python3-mako=1.1.3+ds1-2 \
   && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ENV APPDATA /root
-ENV PYTHONPATH /usr/lib/python3/dist-packages
+ENV APPDATA=/root
+ENV PYTHONPATH=/usr/lib/python3/dist-packages
 
 ARG GITHUB_USER=gnss-sdr
 ARG GITHUB_REPO=gnss-sdr
