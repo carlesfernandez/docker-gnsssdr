@@ -4,7 +4,7 @@ SPDX-License-Identifier: MIT
 )
 
 [comment]: # (
-SPDX-FileCopyrightText: 2017-2023 Carles Fernandez-Prades <carles.fernandez@cttc.es>
+SPDX-FileCopyrightText: 2017-2025 Carles Fernandez-Prades <carles.fernandez@cttc.es>
 )
 <!-- prettier-ignore-end -->
 
@@ -63,13 +63,13 @@ folder inside the container, with read and write permissions.
 
   Install the X11 server utilities in the host machine:
 
-  - Debian: `apt-get install x11-xserver-utils`
-  - Ubuntu: `apt-get install x11-xserver-utils`
+  - Debian: `apt install x11-xserver-utils`
+  - Ubuntu: `apt install x11-xserver-utils`
   - Arch Linux: `pacman -S xorg-xhost`
-  - Kali Linux: `apt-get install x11-xserver-utils`
+  - Kali Linux: `apt install x11-xserver-utils`
   - CentOS: `yum install xorg-xhost`
   - Fedora: `dnf install xorg-xhost`
-  - Raspbian: `apt-get install x11-xserver-utils`
+  - Raspbian: `apt install x11-xserver-utils`
 
   Each time you want to use the graphical environment, adjust the permission of
   the X server in the host by the following command:
@@ -136,7 +136,7 @@ The default values are `GITHUB_USER=gnss-sdr`, `GITHUB_REPO=gnss-sdr`, and
 
 ## Copyright and License
 
-Copyright: &copy; 2017-2023 Carles Fern&aacute;ndez-Prades,
+Copyright: &copy; 2017-2025 Carles Fern&aacute;ndez-Prades,
 [CTTC](https://www.cttc.cat). All rights reserved.
 
 The content of this repository is published under the [MIT](./LICENSE) license.

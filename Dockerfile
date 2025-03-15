@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2017-2024, Carles Fernandez-Prades <carles.fernandez@cttc.es>
+# SPDX-FileCopyrightText: 2017-2025, Carles Fernandez-Prades <carles.fernandez@cttc.es>
 # SPDX-License-Identifier: MIT
 #
 # Use phusion/baseimage as base image.
@@ -6,11 +6,11 @@
 # for a list of version numbers.
 
 FROM phusion/baseimage:jammy-1.0.2
-LABEL version="4.0" description="GNSS-SDR image" maintainer="carles.fernandez@cttc.es"
+LABEL version="5.0" description="GNSS-SDR image" maintainer="carles.fernandez@cttc.es"
 
 WORKDIR /home/src
 
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive && apt-get install -y --no-install-recommends \
+RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends \
   bison=2:3.8.2+dfsg-1build1 \
   build-essential=12.9ubuntu3 \
   cmake=3.22.1-1ubuntu1.22.04.2 \
@@ -45,7 +45,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive && apt-get install -
   nano=6.2-1 \
   protobuf-compiler=3.12.4-1ubuntu7.22.04.1 \
   python3-mako=1.1.3+ds1-2 \
-  && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+  && apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV APPDATA=/root
 ENV PYTHONPATH=/usr/lib/python3/dist-packages

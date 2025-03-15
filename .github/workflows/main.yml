@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2017-2021, Carles Fernandez-Prades <carles.fernandez@cttc.es>
+# SPDX-FileCopyrightText: 2017-2025, Carles Fernandez-Prades <carles.fernandez@cttc.es>
 # SPDX-License-Identifier: MIT
 
 name: Simple CI
@@ -9,7 +9,7 @@ jobs:
   REUSE-compliance:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v4
     - name: Check REUSE compliance
       uses: docker://fsfe/reuse
       with:
