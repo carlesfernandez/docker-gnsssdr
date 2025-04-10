@@ -35,7 +35,6 @@ RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y --no-install-rec
   libiio-dev=0.25-4build2 \
   liblapack-dev=3.12.0-3build1.1 \
   libmatio-dev=1.5.26-1build3 \
-  libsndfile1-dev=1.2.2-1ubuntu5.24.04.1 \
   liborc-0.4-dev=1:0.4.38-1ubuntu0.1 \
   libpcap-dev=1.10.4-4.1ubuntu3 \
   libprotobuf-dev=3.21.12-8.2build1 \
