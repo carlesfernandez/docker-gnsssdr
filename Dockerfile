@@ -40,11 +40,11 @@ RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y --no-install-rec
   libprotobuf-dev=3.21.12-8.2ubuntu0.2 \
   libpugixml-dev=1.14-0.1build1 \
   libuhd-dev=4.6.0.0+ds1-5.1ubuntu0.24.04.1 \
-  libxml2-dev=2.9.14+dfsg-1.3ubuntu3.4 \
+  libxml2-dev=2.9.14+dfsg-1.3ubuntu3.5 \
   nano=7.2-2ubuntu0.1 \
   protobuf-compiler=3.21.12-8.2ubuntu0.2 \
   python3-mako=1.3.2-1 \
-  vim=2:9.1.0016-1ubuntu7.8 \
+  vim=2:9.1.0016-1ubuntu7.9 \
   && apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV APPDATA=/root
