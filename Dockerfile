@@ -29,7 +29,7 @@ RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y --no-install-rec
   libboost-system-dev=1.83.0.1ubuntu2 \
   libboost-thread-dev=1.83.0.1ubuntu2 \
   libgflags-dev=2.2.2-2build1 \
-  libgnutls28-dev=3.8.3-1.1ubuntu3.5 \
+  libgnutls28-dev=3.8.3-1.1ubuntu3.6 \
   libgoogle-glog-dev=0.6.0-2.1build1 \
   libgtest-dev=1.14.0-1 \
   libiio-dev=0.25-4build2 \
@@ -44,7 +44,7 @@ RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y --no-install-rec
   nano=7.2-2ubuntu0.1 \
   protobuf-compiler=3.21.12-8.2ubuntu0.3 \
   python3-mako=1.3.2-1 \
-  vim=2:9.1.0016-1ubuntu7.13 \
+  vim=2:9.1.0016-1ubuntu7.14 \
   && apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV APPDATA=/root
