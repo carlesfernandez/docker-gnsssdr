@@ -1,50 +1,48 @@
-# SPDX-FileCopyrightText: 2017-2025, Carles Fernandez-Prades <carles.fernandez@cttc.es>
+# SPDX-FileCopyrightText: 2017-2026, Carles Fernandez-Prades <carles.fernandez@cttc.es>
 # SPDX-License-Identifier: MIT
 #
 # Use phusion/baseimage as base image.
 # See https://github.com/phusion/baseimage-docker/releases
 # for a list of version numbers.
 
-FROM phusion/baseimage:noble-1.0.2
-LABEL version="6.0" description="GNSS-SDR image" maintainer="carles.fernandez@cttc.es"
+FROM phusion/baseimage:resolute
+LABEL version="7.0" description="GNSS-SDR image" maintainer="carles.fernandez@cttc.es"
 
 WORKDIR /home/src
 
 RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends \
-  bison=2:3.8.2+dfsg-1build2 \
-  build-essential=12.10ubuntu1 \
-  cmake=3.28.3-1build7 \
-  flex=2.6.4-8.2build1 \
-  gir1.2-gtk-3.0=3.24.41-4ubuntu1.3 \
-  git=1:2.43.0-1ubuntu7.3 \
-  gnuradio-dev=3.10.9.2-1.1ubuntu2 \
-  gr-osmosdr=0.2.5-2.1build3 \
-  libad9361-dev=0.3-2build1 \
-  libarmadillo-dev=1:12.6.7+dfsg-1build2 \
-  libblas-dev=3.12.0-3build1.1 \
-  libboost-chrono-dev=1.83.0.1ubuntu2 \
-  libboost-date-time-dev=1.83.0.1ubuntu2 \
-  libboost-dev=1.83.0.1ubuntu2 \
-  libboost-serialization-dev=1.83.0.1ubuntu2 \
-  libboost-system-dev=1.83.0.1ubuntu2 \
-  libboost-thread-dev=1.83.0.1ubuntu2 \
-  libgflags-dev=2.2.2-2build1 \
-  libgnutls28-dev=3.8.3-1.1ubuntu3.6 \
-  libgoogle-glog-dev=0.6.0-2.1build1 \
-  libgtest-dev=1.14.0-1 \
-  libiio-dev=0.25-4build2 \
-  liblapack-dev=3.12.0-3build1.1 \
-  libmatio-dev=1.5.26-1build3 \
-  liborc-0.4-dev=1:0.4.38-1ubuntu0.1 \
-  libpcap-dev=1.10.4-4.1ubuntu3 \
-  libprotobuf-dev=3.21.12-8.2ubuntu0.3 \
-  libpugixml-dev=1.14-0.1build1 \
-  libuhd-dev=4.6.0.0+ds1-5.1ubuntu0.24.04.1 \
-  libxml2-dev=2.9.14+dfsg-1.3ubuntu3.7 \
-  nano=7.2-2ubuntu0.2 \
-  protobuf-compiler=3.21.12-8.2ubuntu0.3 \
-  python3-mako=1.3.2-1 \
-  vim=2:9.1.0016-1ubuntu7.15 \
+  bison=2:3.8.2+dfsg-1build4 \
+  build-essential=12.12ubuntu2 \
+  cmake=4.2.3-2ubuntu2 \
+  flex=2.6.4-8.2build2 \
+  gir1.2-gtk-3.0=3.24.52-0ubuntu1 \
+  git=1:2.53.0-1ubuntu1 \
+  gnuradio-dev=3.10.12.0-6 \
+  gr-osmosdr=0.2.6-6 \
+  libabsl-dev=20260107.0-4 \
+  libad9361-dev=0.3-4 \
+  libarmadillo-dev=1:15.2.1+dfsg-2 \
+  libblas-dev=3.12.1-7ubuntu1 \
+  libboost-chrono-dev=1.90.0.1ubuntu3 \
+  libboost-date-time-dev=1.90.0.1ubuntu3 \
+  libboost-dev=1.90.0.1ubuntu3 \
+  libboost-serialization-dev=1.90.0.1ubuntu3 \
+  libboost-thread-dev=1.90.0.1ubuntu3 \
+  libgtest-dev=1.17.0-1build1 \
+  libiio-dev=0.26-2build2 \
+  liblapack-dev=3.12.1-7ubuntu1 \
+  libmatio-dev=1.5.30-2 \
+  liborc-0.4-dev=1:0.4.42-2 \
+  libpcap-dev=1.10.6-1ubuntu1 \
+  libprotobuf-dev=3.21.12-15ubuntu1 \
+  libpugixml-dev=1.14-2build1 \
+  libssl-dev=3.5.5-1ubuntu3.2 \
+  libuhd-dev=4.9.0.1-1ubuntu1 \
+  libxml2-dev=2.15.2+dfsg-0.1 \
+  nano=8.7.1-1ubuntu0.1 \
+  protobuf-compiler=3.21.12-15ubuntu1 \
+  python3-mako=1.3.10-3ubuntu0.1 \
+  vim=2:9.1.2141-1ubuntu4.5 \
   && apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV APPDATA=/root
@@ -57,7 +55,7 @@ ARG GITHUB_BRANCH=next
 RUN git config --global http.postBuffer 52428800 && \
   git clone https://github.com/${GITHUB_USER}/${GITHUB_REPO}.git && \
   cd gnss-sdr  && git checkout ${GITHUB_BRANCH} && mkdir -p build && cd build && \
-  cmake -DENABLE_OSMOSDR=ON -DENABLE_FMCOMMS2=ON -DENABLE_PLUTOSDR=ON -DENABLE_RAW_UDP=ON -DENABLE_ZMQ=ON -DENABLE_PACKAGING=ON -DENABLE_INSTALL_TESTS=ON .. && \
+  cmake -DENABLE_OSMOSDR=ON -DENABLE_FMCOMMS2=ON -DENABLE_PLUTOSDR=ON -DENABLE_RAW_UDP=ON -DENABLE_ZMQ=ON -DENABLE_ION=ON -DENABLE_PACKAGING=ON -DENABLE_INSTALL_TESTS=ON .. && \
   make -j2 && make install && cd ../.. && rm -rf * && rm -rf /home/*
 
 WORKDIR /home
