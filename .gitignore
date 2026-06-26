@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: 2017-2026, Carles Fernandez-Prades <carles.fernandez@cttc.es>
+# SPDX-License-Identifier: MIT
+
+# Claude Code
+.claude/settings.local.json
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Local environment / secrets
+.env
