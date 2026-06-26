@@ -12,7 +12,7 @@ WORKDIR /home/src
 
 RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends \
   bison=2:3.8.2+dfsg-1build4 \
-  build-essential=12.12ubuntu2 \
+  build-essential=12.12ubuntu2.26.04.1 \
   cmake=4.2.3-2ubuntu2 \
   flex=2.6.4-8.2build2 \
   gir1.2-gtk-3.0=3.24.52-0ubuntu1 \
@@ -38,7 +38,7 @@ RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y --no-install-rec
   libpugixml-dev=1.14-2build1 \
   libssl-dev=3.5.5-1ubuntu3.2 \
   libuhd-dev=4.9.0.1-1ubuntu1 \
-  libxml2-dev=2.15.2+dfsg-0.1 \
+  libxml2-dev=2.15.2+dfsg-0.1ubuntu0.1 \
   nano=8.7.1-1ubuntu0.1 \
   protobuf-compiler=3.21.12-15ubuntu1 \
   python3-mako=1.3.10-3ubuntu0.1 \
