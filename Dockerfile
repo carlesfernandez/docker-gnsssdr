@@ -42,7 +42,7 @@ RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y --no-install-rec
   nano=8.7.1-1ubuntu0.1 \
   protobuf-compiler=3.21.12-15ubuntu1 \
   python3-mako=1.3.10-3ubuntu0.1 \
-  vim=2:9.1.2141-1ubuntu4.7 \
+  vim=2:9.1.2141-1ubuntu4.8 \
   && apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV APPDATA=/root
