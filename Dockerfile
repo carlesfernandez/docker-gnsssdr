@@ -11,7 +11,7 @@ LABEL version="7.0" description="GNSS-SDR image" maintainer="carles.fernandez@ct
 WORKDIR /home/src
 
 RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends \
-  bison=2:3.8.2+dfsg-1build4 \
+  bison=2:3.8.2+dfsg-1ubuntu0.26.04.1 \
   build-essential=12.12ubuntu2.26.04.2 \
   cmake=4.2.3-2ubuntu2 \
   flex=2.6.4-8.2build2 \
